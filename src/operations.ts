@@ -1,3 +1,7 @@
-module.exports.multiply = function(x:number, y:number){
-    return x * y;
+class QuadraticEquation {
+    public solve(a: number, b: number, c: number): number {
+        return 0
+    }
 }
+
+module.exports.equation = new QuadraticEquation()
