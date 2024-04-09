@@ -7,7 +7,7 @@ const port = 3000;
 app.use(express.static('public'));
 // Defining a route for handling client communication
 app.get('/api/message', (req:any, res:any) => {
-	const message = 'Hello Geek. This Message is From Server';
+	const message = 'Привет! Это сообщение от сервера';
 	res.json({ message });
 });
 
