@@ -9,6 +9,13 @@ class QuadraticEquation {
             return [] as number[]
         }
 
+        //Два корня 
+        if (D > 0) {
+            const x1 = (- b + Math.sqrt(D))/ 2 * a
+            const x2 = (-b - Math.sqrt(D))/ 2 * a
+            return [x1, x2]
+        }
+
         return [0]
     }
 }
