@@ -20,7 +20,18 @@ it('x^2-1 = 0 есть два корня', () => {
     const expected = 0
     const result = operations.equation.solve(a, b, c)
 
-    if(result[0] != -1 && result[1] != -1){
+    if(result[0] != 1 || result[1] != -1){
+        throw new Error(`Expected ${expected}, but got ${result}`)
+    }
+})
+
+//для уравнения x^2+2x+1 = 0 есть один корень кратности 2 (x1= x2 = -1)
+it('x^2+2x+1 = 0 есть один корень', () => {
+    const a = 1, b = 2, c = 1
+    const expected = 0
+    const result = operations.equation.solve(a, b, c)
+
+    if(result[0] != -1 || result[1] != -1){
         throw new Error(`Expected ${expected}, but got ${result}`)
     }
 })
