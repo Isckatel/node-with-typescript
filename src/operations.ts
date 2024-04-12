@@ -5,6 +5,10 @@ class QuadraticEquation {
         let x1: number = 0
         let x2: number = 0
 
+        this.isValidNumber(a);
+        this.isValidNumber(b);
+        this.isValidNumber(c);
+
         if (a >= -e && a <= e ) {
             throw new Error('a не может быть равен 0')
         }
@@ -29,6 +33,12 @@ class QuadraticEquation {
         }
 
         return [x1, x2]
+    }
+
+    private isValidNumber(a: number) {
+        if (Number.isNaN(a) || !Number.isFinite(a)) {
+            throw new Error('коэффициент не конечное число')
+        }
     }
 }
 

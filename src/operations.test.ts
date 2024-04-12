@@ -45,3 +45,27 @@ it('коэффициент a не может быть равен 0', () => {
         assert.throw(() => { operations.equation.solve(a, b, c, e) }, Error, "Error thrown");
     });
 })
+
+//коэффициент не может быть равен NaN
+it('коэффициент не может быть равен NaN', () => {
+    const a = NaN, b = 2, c = 1
+    it("is a function", function(){
+        assert.throw(() => { operations.equation.solve(a, b, c, e) }, Error, "Error thrown");
+    });
+})
+
+//коэффициент не может быть равен NEGATIVE_INFINITY
+it('коэффициент не может быть равен NEGATIVE_INFINITY', () => {
+    const a = 0, b = Number.NEGATIVE_INFINITY, c = 1
+    it("is a function", function(){
+        assert.throw(() => { operations.equation.solve(a, b, c, e) }, Error, "Error thrown");
+    });
+})
+
+//коэффициент не может быть равен POSITIVE_INFINITY
+it('коэффициент не может быть равен POSITIVE_INFINITY', () => {
+    const a = 0, b = 2, c = Number.POSITIVE_INFINITY
+    it("is a function", function(){
+        assert.throw(() => { operations.equation.solve(a, b, c, e) }, Error, "Error thrown");
+    });
+})
