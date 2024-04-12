@@ -5,25 +5,25 @@ class QuadraticEquation {
         let x1: number = 0
         let x2: number = 0
 
-        if (a > -e && a < e ) {
+        if (a >= -e && a <= e ) {
             throw new Error('a не может быть равен 0')
         }
 
         const D = b * b - 4 * a * c
 
         //Корней нет
-        if (D < 0) {
+        if (D < -e) {
             return [] as number[]
         }
 
         //Два корня 
-        if (D > 0) {
+        if (D > e) {
             x1 = (- b + Math.sqrt(D))/ 2 * a
             x2 = (-b - Math.sqrt(D))/ 2 * a
         }
 
         //Один корень
-        if (D == 0) {
+        if (D >= -e && D <= e) {
             x1 = -b / 2 * a
             x2 = x1
         }

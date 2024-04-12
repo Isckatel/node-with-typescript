@@ -29,7 +29,7 @@ it('x^2-1 = 0 есть два корня', () => {
 
 //для уравнения x^2+2x+1 = 0 есть один корень кратности 2 (x1= x2 = -1)
 it('x^2+2x+1 = 0 есть один корень', () => {
-    const a = 1, b = 2, c = 1
+    const a = 1, b = 2, c = 1.00000001
     const expected = [-1, -1]
     const result = operations.equation.solve(a, b, c, e)
 
